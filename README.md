@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # WorkSphere - Employee Management Platform
 
 WorkSphere is a production-ready, commercial-grade Full Stack Human Resource Management System (HRMS) built using **React 19 (Vite, Tailwind, Recharts)** on the frontend and **Spring Boot 3 (Java 21, Spring Data JPA, Spring Security)** on the backend, integrated with **Supabase PostgreSQL**.
@@ -76,3 +77,6 @@ Check out [setup-guide.md](file:///d:/PROJECT%2001/setup-guide.md) for full, ste
 * **Employee**: `employee@worksphere.com` / `password150` (or `password123`)
 
 *All default passwords are set to `password123` in the seed script.*
+=======
+# WORKSPHERE-EMPLOYEE-MANAGEMENT-SYSTEM
+>>>>>>> 71b09164f954ab065687ce05226b01a06d0571bc
