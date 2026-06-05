@@ -60,23 +60,8 @@ WorkSphere/
 │       ├── context/            # AuthContext & ThemeContext
 │       ├── components/common/  # Sidebar, Navbar, Skeleton loaders
 │       └── pages/              # Platform page modules
-├── setup-tools.ps1             # Windows toolchain PATH helper
-├── setup-guide.md              # Detailed local launch instructions
+
 └── README.md                   # Project overview
-```
-
----
-
-## ⚙️ Getting Started
-
-Check out [setup-guide.md](file:///d:/PROJECT%2001/setup-guide.md) for full, step-by-step instructions on setting up your local database instance and running both backend and frontend servers.
-
-### Default Login Accounts:
-* **Admin**: `admin@worksphere.com` / `password123`
-* **HR Manager**: `hr@worksphere.com` / `password123`
-* **Employee**: `employee@worksphere.com` / `password150` (or `password123`)
-
-*All default passwords are set to `password123` in the seed script.*
 =======
 # WORKSPHERE-EMPLOYEE-MANAGEMENT-SYSTEM
 >>>>>>> 71b09164f954ab065687ce05226b01a06d0571bc
