@@ -43,7 +43,12 @@ export const AuthProvider = ({ children }) => {
             localStorage.setItem('token', newToken);
             setToken(newToken);
             axios.defaults.headers.common['Authorization'] = `Bearer ${newToken}`;
-            originalRequest.headers['Authorization'] = `Bearer ${newToken}`;
+            if (originalRequest.headers && typeof originalRequest.headers.set === 'function') {
+              originalRequest.headers.set('Authorization', `Bearer ${newToken}`);
+            } else {
+              originalRequest.headers = originalRequest.headers || {};
+              originalRequest.headers['Authorization'] = `Bearer ${newToken}`;
+            }
             
             return axios(originalRequest);
           } catch (refreshError) {

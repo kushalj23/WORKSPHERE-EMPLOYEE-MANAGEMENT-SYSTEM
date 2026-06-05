@@ -8,9 +8,9 @@ spring:
     name: worksphere
   
   datasource:
-    url: ${DB_URL:jdbc:postgresql://db.psotqdkpduaerahxbfbh.supabase.co:5432/postgres}
-    username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:}
+    url: ${DB_URL:jdbc:postgresql://aws-1-ap-southeast-2.pooler.supabase.com:5432/postgres?sslmode=require}
+    username: ${DB_USERNAME:postgres.psotqdkpduaerahxbfbh}
+    password: ${DB_PASSWORD:Jkl@1234_2026}
     driver-class-name: org.postgresql.Driver
   
   jpa:
