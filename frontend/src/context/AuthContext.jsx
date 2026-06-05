@@ -3,7 +3,16 @@ import axios from 'axios';
 
 const AuthContext = createContext();
 
-const API_URL = 'http://localhost:8080/api/v1';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api/v1';
+
+// Intercept all axios requests to route to VITE_API_URL if configured
+axios.interceptors.request.use((config) => {
+  const customBaseURL = import.meta.env.VITE_API_URL;
+  if (customBaseURL && config.url && config.url.startsWith('http://localhost:8080/api/v1')) {
+    config.url = config.url.replace('http://localhost:8080/api/v1', customBaseURL);
+  }
+  return config;
+});
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
