@@ -8,6 +8,8 @@ import java.time.LocalDateTime;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "employees")
 @Getter
@@ -46,6 +48,7 @@ public class Employee {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "department_id")
+    @JsonIgnoreProperties("manager")
     private Department department;
 
     @ManyToOne(fetch = FetchType.EAGER)

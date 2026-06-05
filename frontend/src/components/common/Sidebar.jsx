@@ -72,6 +72,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
             <NavLink
               key={item.name}
               to={item.path}
+              end
               onClick={() => setIsOpen(false)}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 group ${

@@ -6,6 +6,8 @@ import java.time.LocalDateTime;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "designations", uniqueConstraints = {
     @UniqueConstraint(columnNames = {"title", "department_id"})
@@ -25,6 +27,7 @@ public class Designation {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "department_id", nullable = false)
+    @JsonIgnoreProperties("manager")
     private Department department;
 
     @CreationTimestamp
